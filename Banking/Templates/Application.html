@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Application Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhMVFRUXFxUVFxcVFxcVFRUXFRUXFxUXFxcYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFQ8PFSsdFR0tLS0rLSstLS0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTc3NystLS0tKy0tLf/AABEIALwBDAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAABAgADBAf/xAAfEAEBAQEBAQADAQEBAAAAAAAAARECEiExQVFhA4H/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwD7DV/84mxXEad6epieavR1RGkApgFPTIFaimhVT00hxpBVJLaII2loKzECJpkankUNa3oWALQ2Cqo1hW1VVo1OgXDa1rNKCpTEabQxelEaomPZXPp0R1GXKHg3pPPxuoK0rek6mflVx0TWqQU2NFRBODpeJvKieaqNgAwdGQ+QTCcYBRWtTRYMbrs9VCq06DCitamnRirAIqxsFbWZsBoLV+WvImidfpTTG+CPXU9Fr/jDkdc7VVAsaNawVWtaRtOiqxmZGThwSOkBOJ8utiaJo55NM/DAlC+vjn1RYLU4vEK1GsTavBiiaLFVOCtIcVGsDUYPDrjYaa5+R5dfKbDTTOR1cXg8omudiryq1Nqq7foRr03VZYTWp1Nqqm1tHRitKkhkEVEZUcHJlRFcz4ZBzXSQZrYLFARy66/SZT/0HNGzYixU+NgNjnTaOqquergkdJyrVFbyxRkCHGwDI3k8xcE1Pn4mrxNqDnVcwVU/itUVsVf4kRjGwyIJ6o02JVYxgMiip9VIfJZZawFhDw6cufKxKaNao9hIOoLB10w0d1hBaCWgtbVaHC9xMVglaVSca1AwUpoLlXEcL+DNA0UChrTamqpiohSBra1GiDqp0yMqsrmJ5dJQpYfTqMt00HX9MBcaxMraI3VFoTaNY2tzU1tVVXpMo6R9FkVawVFDp0NqIaU8m0AqDDQVotTam0MV1TUxqDdVvSTaKytTyb0I7dRx/wCjtY5dciRMrGcijS+D1XMiYvn4pM51SIRYY0giZyO+l2JsFT6GmxHVVSnppTIKMTF3lpA1sbDiaB0N1DIBONJCILU2mpCGufpWsrRnTVNGgoxMWBV5EjpKjNV5+IsddZGNc/LnY7XlFFlTzDVQZoqZFRryQYtjCJ6T1Vt1RXLRVdJ1WjIxjaIMMipFcCai1DreUYEqpE2qwZ/UBRTexuqotBGqorFOfRTqcV5EBcMBxEVxV1z9fG9DOPTgh5psRhsR3yujAjjb+jG7i+YNJ65EVf8AW5gabE2HR6EFnweW36eoKnqCcnCKkyN/4qA2GQ8qwZ0Yix06HQRxtONYP4NJ65ieYvpOq1GqaWUFMjcqwBhw4eYianGi6mQQyGcqwekTXblScNRitqTaFVNUKLRTfpGNYDJ6bmDsIJG0Q+RpiMaArBpEEVFo4iqM1qBaBU6lXSaNMMbGqqnR+TY0grGfxpFZBKYvlEi4jNTgjrYi/sNNbyidf1eg6RtawIwawZVaxoNINWY4Cek4ejLBXOzGqrRgpONIq0RHU08wSEFRgm0G02jDgJvX+J6pFoqaLTg1Wk/knDRQqJVyI68qxzjrqMVFHSrBkBzkdE8xuhXVrTUjKkt00qDRrWtaxRuWbqKBNjnXZyv5FlTWhrQV05+Go5VBkBq3IpifR6qYCrChtA1z6UMGoixpFSfSqoY9tEBi+aiOkipXTmGwGftGE1sOtRUix0ahr//Z');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            margin-top: 50px;
+            padding-right: 50px;
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-button {
+            position: fixed;
+            top: 5px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<!--    <nav class="navbar navbar-light bg-light">-->
+        <a href="/" class="btn btn-warning btn-lg logout-button">Logout</a>
+<!--    </nav>-->
+
+    <div class="container">
+    <h1>Account Application Form</h1>
+    <button id="showFormButton" class="btn btn-primary">Show Form</button>
+    <form method="post" id="applicationForm" style="display: none;">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <label><input type="radio" name="gender" value="male">Male</label>
+            <label><input type="radio" name="gender" value="female">Female</label>
+            <label><input type="radio" name="gender" value="other">Other</label>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter your phone number">
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="district">District</label>
+            <select id="district" name="district">
+                <option value="select">Select Here</option>
+                <option value="alappuzha">Alappuzha</option>
+                <option value="ernakulam">Ernakulam</option>
+                <option value="kozhikode">Kozhikode</option>
+                <option value="kollam">Kollam</option>
+                <option value="kannur">Kannur</option>
+                <option value="idukki">Idukki</option>
+                <option value="palakkad">Palakkad</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="branch">Branch</label>
+            <select id="branch" name="branch">
+                <option value="select">Select Here</option>
+                <option value="branch1">Branch 1</option>
+                <option value="branch2">Branch 2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="account-type">Account Type</label>
+            <select id="account-type" name="account-type" required>
+                <option value="savings">Savings Account</option>
+                <option value="current">Current Account</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Materials Provide</label><br>
+                <input type="checkbox" id="debit-card" name="materials[]" value="debit-card">
+                <label for="debit-card">Debit Card</label><br>
+
+                <input type="checkbox" id="credit-card" name="materials[]" value="credit-card">
+                <label for="credit-card">Credit Card</label><br>
+
+                <input type="checkbox" id="cheque-book" name="materials[]" value="cheque-book">
+                <label for="cheque-book">Cheque Book</label><br>
+        </div>
+        <button id="submit">Submit</button>
+    </form>
+
+    </div>
+    <script>
+        const showFormButton = document.getElementById("showFormButton");
+        const applicationForm = document.getElementById("applicationForm");
+
+        showFormButton.addEventListener("click", function() {
+            applicationForm.style.display = "block";
+            showFormButton.style.display = "none";
+        });
+        const districtDropdown = document.getElementById("district");
+        const branchDropdown = document.getElementById("branch");
+
+        const branchOptions = {
+            alappuzha: ['Aroor','Cherthala'],
+            ernakulam: ['Aluva', 'Edapilly'],
+            kozhikode: ['Atholi','Beypore'],
+            kollam: ['Kadakkal','Nilamel'],
+            kannur: ['Iritty','Mattanur'],
+            palakkad: ['Alathur','Chalissery'],
+            idukki: ['Adimali','Kattappana'],
+        };
+        function updateBranchOptions() {
+            const selectedDistrict = districtDropdown.value;
+            const branches = branchOptions[selectedDistrict] || [];
+
+            branchDropdown.innerHTML = "";
+
+            branches.forEach(branch => {
+                const option = document.createElement("option");
+                option.value = branch;
+                option.textContent = branch;
+                branchDropdown.appendChild(option);
+            });
+        }
+        districtDropdown.addEventListener("change", updateBranchOptions);
+
+        updateBranchOptions();
+
+        document.getElementById("submit").addEventListener("click", function() {
+            const nameInput = document.getElementById("name").value.trim();
+            const dobInput = document.getElementById("dob").value;
+            const ageInput = document.getElementById("age").value.trim();
+            const genderInputs = document.getElementsByName("gender");
+            const phoneInput = document.getElementById("phone").value.trim();
+            const emailInput = document.getElementById("email").value.trim();
+            const addressInput = document.getElementById("address").value.trim();
+            const districtInput = document.getElementById("district").value;
+            const branchInput = document.getElementById("branch").value;
+            const accountTypeInput = document.getElementById("account-type").value;
+            const materialsInputs = document.querySelectorAll("input[name='materials[]']:checked");
+
+            let isValid = true;
+
+            if (nameInput === "") {
+                isValid = false;
+            }
+            if (dobInput === "") {
+                isValid = false;
+            }
+            if (ageInput === "" || isNaN(ageInput)) {
+                isValid = false;
+            }
+            let genderSelected = false;
+            for (const genderInput of genderInputs) {
+                if (genderInput.checked) {
+                    genderSelected = true;
+                    break;
+                }
+            }
+            if (!genderSelected) {
+                isValid = false;
+            }
+            const phonePattern = /^[0-9]{10}$/;
+            if (phoneInput === "" || !phonePattern.test(phoneInput)) {
+                isValid = false;
+            }
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput === "" || !emailPattern.test(emailInput)) {
+                isValid = false;
+            }
+            if (addressInput === "") {
+                isValid = false;
+            }
+            if (districtInput === "select") {
+                isValid = false;
+            }
+            if (branchInput === "select") {
+                isValid = false;
+            }
+            if (accountTypeInput === "") {
+                isValid = false;
+            }
+            if (materialsInputs.length === 0) {
+                isValid = false;
+            }
+            if (isValid) {
+                alert("Application Form Submitted Successfully");
+            } else {
+                alert("Please fill in all the required fields correctly");
+            }
+        });
+    </script>
+
+</body>
+</html>

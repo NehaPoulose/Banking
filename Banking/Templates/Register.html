@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            background-image: url('https://media.istockphoto.com/id/1399784221/photo/filling-form-online-questionnaire-survey.webp?b=1&s=170667a&w=0&k=20&c=jBT7dKc_yfv-a3LLnV-iJRn8V5mT21kj8uUSUENJGVY=');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .registration-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            margin-top: 50px;
+            padding-right: 40px;
+        }
+
+        .registration-container h1 {
+            text-align: center;
+        }
+
+        .registration-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .registration-container input[type="text"],
+        .registration-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .registration-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .registration-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-link a {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-container">
+        <h1>Registration</h1>
+        <form method="POST" id="registrationForm">
+            {% csrf_token %}
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+
+            <input type="submit" value="Register">
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="{% url 'Login' %}">Login here</a></p>
+        </div>
+    </div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+</body>
+</html>
